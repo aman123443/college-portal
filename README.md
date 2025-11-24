@@ -289,3 +289,146 @@ You have successfully:
 
 This README helps you redo the entire project quickly in your exam.
 
+
+#📝 Viva Questions & Answers (Important for Exam)
+1️⃣ What is JSP?
+
+Answer:
+JSP (Java Server Pages) is a server-side technology that allows writing HTML pages with Java code embedded. JSP is used to create dynamic web pages.
+
+2️⃣ Why did you use Maven?
+
+Answer:
+Maven automates project creation, dependency management, build process, and WAR file generation. It makes Java web projects easier and structured.
+
+3️⃣ What is a WAR file?
+
+Answer:
+WAR (Web Application Archive) is a package that contains JSP files, HTML, CSS, images, and project configuration. It is deployed on a servlet container like Tomcat.
+
+4️⃣ What is Tomcat used for?
+
+Answer:
+Apache Tomcat is a Java web server used to run JSP and Servlet-based applications. It processes JSP files and serves them to the browser.
+
+5️⃣ What is the folder structure of a Maven web project?
+
+Answer:
+The main important folder is:
+
+src/main/webapp/
+
+
+This contains:
+
+JSP files
+
+HTML/CSS
+
+WEB-INF/web.xml
+
+6️⃣ What is web.xml?
+
+Answer:
+web.xml is the deployment descriptor. It tells Tomcat how to load the web application.
+(But in Spring Boot modern apps, it is optional.)
+
+7️⃣ Why did you use inline CSS?
+
+Answer:
+Inline CSS makes the UI simple, fast to load, and easy to manage during exam practicals (no need to create separate CSS files).
+
+8️⃣ How did you generate the project?
+
+Answer:
+Using Maven archetype command:
+
+mvn archetype:generate -DgroupId=com.college.portal -DartifactId=college-portal -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+9️⃣ How did you deploy your project?
+
+Answer:
+
+Generated WAR file using mvn clean package
+
+Copied WAR file to tomcat/webapps/
+
+Started Tomcat using startup.bat
+
+Accessed the application using browser
+
+http://localhost:8080/college-portal/
+
+🔟 What technologies did you use? Why?**
+Technology	Purpose
+JSP	Build dynamic web pages
+HTML/CSS	Create UI
+Maven	Manage project + Create WAR
+Tomcat	Run JSP web application
+Git/GitHub	Version control & Submission
+1️⃣1️⃣ What is the purpose of pom.xml?
+
+Answer:
+pom.xml is the configuration file where Maven stores project details and dependencies.
+Example: javax.servlet-api.
+
+1️⃣2️⃣ What is the difference between JSP & Servlet?
+JSP	Servlet
+HTML + Java	Full Java Code
+Easy for UI	Hard for UI
+Mostly used for presentation	Used for backend logic
+1️⃣3️⃣ Why do we use Servlet API with JSP?
+
+Answer:
+Because JSP internally converts to a Servlet. Only Servlet API provides lifecycle methods & request/response handling.
+
+1️⃣4️⃣ How does Tomcat process a JSP file?
+
+Converts JSP to Servlet
+
+Compiles Servlet (.class file)
+
+Executes Java code
+
+Sends HTML output to browser
+
+1️⃣5️⃣ What changes if port 8080 is busy?
+
+Answer:
+We change the port in conf/server.xml:
+
+<Connector port="9090" protocol="HTTP/1.1" />
+
+1️⃣6️⃣ What is WEB-INF?
+
+Answer:
+It contains configuration files like web.xml.
+JSP pages inside WEB-INF cannot be accessed directly.
+
+1️⃣7️⃣ What if WAR file does not deploy?
+
+Answer:
+Check:
+
+Tomcat version
+
+Correct folder path (webapps/)
+
+Port conflicts
+
+Restart Tomcat
+
+1️⃣8️⃣ What is your project’s main functionality?
+
+Answer:
+It displays:
+
+Home page
+
+About page
+
+Navigation between them
+
+Styled UI using CSS
+
+Runs perfectly on Tomcat
