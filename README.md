@@ -290,7 +290,7 @@ You have successfully:
 This README helps you redo the entire project quickly in your exam.
 
 
-#📝 Viva Questions & Answers (Important for Exam)
+📝 Viva Questions & Answers (Important for Exam)
 1️⃣ What is JSP?
 
 Answer:
